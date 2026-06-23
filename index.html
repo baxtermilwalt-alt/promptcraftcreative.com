@@ -451,8 +451,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
       margin-bottom: 20px;
+    }
+    .service-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--blue);
+      stroke-width: 1.75;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .service-card h3 {
@@ -1032,10 +1040,7 @@
         </p>
         <div class="hero-actions">
           <a href="#contact" class="btn-primary">
-            Démarrer un projet
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            Démarrer un projet ›
           </a>
           <a href="#services" class="btn-ghost">Voir les services</a>
         </div>
@@ -1058,27 +1063,27 @@
         <div class="hero-card">
           <div class="hero-card-title">✦ Ce que je livre</div>
           <div class="hero-card-item">
-            <div class="hero-card-icon">🤖</div>
+            <div class="hero-card-icon"><svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--blue)" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><path d="M8 15h.01M12 15h.01M16 15h.01"/></svg></div>
             Outils IA sur mesure
             <span class="hero-card-check">✓</span>
           </div>
           <div class="hero-card-item">
-            <div class="hero-card-icon">⚡</div>
+            <div class="hero-card-icon"><svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--blue)" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
             Automatisation de flux
             <span class="hero-card-check">✓</span>
           </div>
           <div class="hero-card-item">
-            <div class="hero-card-icon">🎯</div>
+            <div class="hero-card-icon"><svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--blue)" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h8"/><path d="M8 14h5"/></svg></div>
             Prompt engineering
             <span class="hero-card-check">✓</span>
           </div>
           <div class="hero-card-item">
-            <div class="hero-card-icon">📚</div>
+            <div class="hero-card-icon"><svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--blue)" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
             Formation & conseil IA
             <span class="hero-card-check">✓</span>
           </div>
           <div class="hero-card-item">
-            <div class="hero-card-icon">🎨</div>
+            <div class="hero-card-icon"><svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--blue)" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
             Contenus & identité visuelle
             <span class="hero-card-check">✓</span>
           </div>
@@ -1096,42 +1101,42 @@
         existants, sans révolution inutile.</p>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">⚡</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
           <h3>Automatisation & Outils IA</h3>
           <p>Conversion de données, workflows intelligents, chatbots métier, intégration API. Des outils qui tournent
             sans intervention manuelle.</p>
           <span class="service-tag">Sur mesure</span>
         </div>
         <div class="service-card">
-          <div class="service-icon">🎯</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h8"/><path d="M8 14h5"/></svg></div>
           <h3>Prompt Engineering</h3>
           <p>Conception de prompts avancés adaptés à votre secteur. RAG, agents IA, chaînes de raisonnement, des
             instructions qui font vraiment la différence.</p>
           <span class="service-tag">Expertise</span>
         </div>
         <div class="service-card">
-          <div class="service-icon">📚</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
           <h3>Formation & Conseil IA</h3>
           <p>Accompagnement individuel ou en équipe pour comprendre, adopter et exploiter l'IA dans votre quotidien
             professionnel.</p>
           <span class="service-tag">Formation</span>
         </div>
         <div class="service-card">
-          <div class="service-icon">✍️</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
           <h3>Production de Contenus</h3>
           <p>Articles, newsletters, posts LinkedIn, scripts vidéo, e-books. Une production assistée IA avec un vrai
             regard éditorial.</p>
           <span class="service-tag">Contenus</span>
         </div>
         <div class="service-card">
-          <div class="service-icon">🎬</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
           <h3>Vidéo & Avatar IA</h3>
           <p>Production vidéo IA, avatars personnalisés, voix off synthétisée, sous-titrage automatique. Du contenu
             vidéo pro sans plateau de tournage.</p>
           <span class="service-tag">Vidéo</span>
         </div>
         <div class="service-card">
-          <div class="service-icon">🎨</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
           <h3>Image & Identité Visuelle</h3>
           <p>Génération d'images sur mesure, identité visuelle IA, moodboards, portraits professionnels. Une présence
             visuelle cohérente et distinctive.</p>
@@ -1158,7 +1163,7 @@
           </p>
           <div class="about-values">
             <div class="about-value">
-              <div class="about-value-icon">🎯</div>
+              <div class="about-value-icon"><svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--blue)" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
               <div>
                 <h4>Résultat avant tout</h4>
                 <p>Je ne livre pas de la technologie, je livre des solutions qui fonctionnent dans votre contexte réel.
@@ -1166,7 +1171,7 @@
               </div>
             </div>
             <div class="about-value">
-              <div class="about-value-icon">🔒</div>
+              <div class="about-value-icon"><svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--blue)" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
               <div>
                 <h4>Propriété intellectuelle préservée</h4>
                 <p>Votre code, vos configurations, vos données restent les vôtres. Transparence totale sur ce qui est
@@ -1174,7 +1179,7 @@
               </div>
             </div>
             <div class="about-value">
-              <div class="about-value-icon">⚡</div>
+              <div class="about-value-icon"><svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--blue)" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
               <div>
                 <h4>Réactivité & proximité</h4>
                 <p>Réponse garantie sous 48h. Un interlocuteur unique qui connaît votre projet de bout en bout.</p>
@@ -1215,7 +1220,7 @@
             <div class="case-result">Classement automatique par date et par client</div>
             <div class="case-result">Interface glisser-déposer, zéro connaissance technique requise</div>
             <div class="case-result">Configurations chiffrées, code source protégé</div>
-            <div class="case-result">Notice d'utilisation 10 pages incluse</div>
+            <div class="case-result">Notice d'utilisation incluse (10 pages)</div>
           </div>
         </div>
         <div>
@@ -1264,28 +1269,28 @@
       <div class="contact-inner">
         <div class="contact-info">
           <div class="contact-item">
-            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" width="18" height="18" stroke="white" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
             <div>
               <h4>Email</h4>
               <p><a href="mailto:support@promptcraftcreative.com">support@promptcraftcreative.com</a></p>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-item-icon">🔗</div>
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" width="18" height="18" stroke="white" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
             <div>
               <h4>Site</h4>
               <p><a href="https://promptcraftcreative.com">promptcraftcreative.com</a></p>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" width="18" height="18" stroke="white" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div>
               <h4>Localisation</h4>
               <p>Aix-en-Provence, France, missions en remote</p>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-item-icon">⏱️</div>
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" width="18" height="18" stroke="white" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
             <div>
               <h4>Délai de réponse</h4>
               <p>Sous 48h garanties</p>
