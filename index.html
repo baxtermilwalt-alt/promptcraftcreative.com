@@ -929,6 +929,7 @@
       .hero-visual {
         display: block;
       }
+
       .hero-card {
         margin-top: 32px;
       }
@@ -945,6 +946,7 @@
       .nav-links {
         display: none;
       }
+
       .nav-links.open {
         display: flex;
         flex-direction: column;
@@ -955,7 +957,7 @@
         background: var(--dark);
         padding: 24px 32px;
         gap: 20px;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         z-index: 999;
       }
 
@@ -1005,7 +1007,8 @@
         <li><a href="#case">Réalisation</a></li>
         <li><a href="#contact" class="nav-cta">Me contacter</a></li>
       </ul>
-      <div class="nav-burger" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open')">
+      <div class="nav-burger"
+        onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open')">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -1198,11 +1201,10 @@
       <div class="case-card">
         <div>
           <div class="case-badge">✓ Livré &amp; en production</div>
-          <h3>Convertisseur EDI universel pour le secteur automobile</h3>
+          <h3>Convertisseur EDI universel multi-formats</h3>
           <p class="case-text">
-            Une entreprise du secteur de la distribution automobile avait besoin de convertir automatiquement ses
-            exports de facturation (Excel BI + CSV multi-clients) en fichiers EDI conformes. Chaque client avait son
-            propre format, ses propres règles métier.
+            Une entreprise avait besoin de convertir automatiquement ses exports de facturation (Excel BI + CSV
+            multi-clients) en fichiers EDI conformes. Chaque client avait son propre format, ses propres règles métier.
           </p>
           <p class="case-text">
             J'ai conçu et livré un outil complet, de l'analyse des fichiers sources jusqu'à l'installateur Windows, en
