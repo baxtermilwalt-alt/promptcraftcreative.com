@@ -1299,7 +1299,7 @@
           </div>
         </div>
         <div class="contact-form">
-          <form action="https://formspree.io/f/xrevnbaz" method="POST">
+          <form id="contact-form">
             <div class="form-group">
               <label>Nom complet</label>
               <input type="text" name="name" placeholder="Prénom Nom" required>
@@ -1323,7 +1323,7 @@
               <label>Message</label>
               <textarea name="message" placeholder="Décrivez votre projet en quelques lignes..." required></textarea>
             </div>
-            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+            <button type="submit" id="contact-btn" class="btn-primary" style="width:100%;justify-content:center;">
               Envoyer le message
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
@@ -1331,6 +1331,9 @@
             </button>
             <p class="form-note">🔒 Vos données ne sont jamais partagées · Réponse sous 48h garantie</p>
           </form>
+          <div id="contact-success" style="display:none;background:#EBF3FB;border-radius:12px;padding:20px 24px;color:#1E7A1E;font-weight:500;margin-top:16px;">
+            ✓ Message envoyé. Je vous répondrai dans les 48h.
+          </div>
         </div>
       </div>
     </div>
@@ -1411,6 +1414,45 @@
     });
   </script>
 
+
+<script>
+  const contactForm = document.getElementById('contact-form');
+  const contactSuccess = document.getElementById('contact-success');
+  const contactBtn = document.getElementById('contact-btn');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData.entries());
+      data['_subject'] = 'PromptCraft Pro - Nouveau message de contact';
+
+      contactBtn.textContent = '...';
+      contactBtn.disabled = true;
+
+      try {
+        const res = await fetch('https://formspree.io/f/xrevnbaz', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+          contactForm.style.display = 'none';
+          contactSuccess.style.display = 'block';
+        } else {
+          contactBtn.textContent = 'Envoyer le message';
+          contactBtn.disabled = false;
+          alert('Une erreur est survenue, réessayez.');
+        }
+      } catch(err) {
+        contactBtn.textContent = 'Envoyer le message';
+        contactBtn.disabled = false;
+        alert('Une erreur est survenue, réessayez.');
+      }
+    });
+  }
+</script>
 </body>
 
 </html>
