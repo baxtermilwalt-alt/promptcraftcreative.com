@@ -800,5 +800,50 @@
     });
   }
 </script>
+
+<script>
+  // Drag-to-scroll and wheel scroll for desktop mouse users
+  const scrollEl = document.querySelector('.screens-scroll');
+
+  if (scrollEl) {
+    let isDown = false;
+    let startX;
+    let scrollLeftStart;
+
+    scrollEl.addEventListener('mousedown', (e) => {
+      isDown = true;
+      scrollEl.style.cursor = 'grabbing';
+      startX = e.pageX - scrollEl.offsetLeft;
+      scrollLeftStart = scrollEl.scrollLeft;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDown = false;
+      scrollEl.style.cursor = 'grab';
+    });
+
+    scrollEl.addEventListener('mouseleave', () => {
+      isDown = false;
+      scrollEl.style.cursor = 'grab';
+    });
+
+    scrollEl.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - scrollEl.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      scrollEl.scrollLeft = scrollLeftStart - walk;
+    });
+
+    scrollEl.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        scrollEl.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+
+    scrollEl.style.cursor = 'grab';
+  }
+</script>
 </body>
 </html>
