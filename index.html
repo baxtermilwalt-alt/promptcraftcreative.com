@@ -133,7 +133,6 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      line-height: 1;
     }
 
     .nav-links a.active {
@@ -1015,23 +1014,6 @@
   </style>
 </head>
 
-<script>
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
-        });
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-
-  sections.forEach(section => spy.observe(section));
-</script>
-
 <body>
 
   <!-- ═══ NAV ═══════════════════════════════════════════════════ -->
@@ -1624,6 +1606,24 @@
       });
     }
   </script>
+
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(section => spy.observe(section));
+  </script>
+
 </body>
 
 </html>
